@@ -8,7 +8,7 @@ const Navigaton = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/galleries">
+                <Link className="navbar-brand" to="/">
                     Galleries
                 </Link>
 
@@ -38,8 +38,13 @@ const Navigaton = () => {
                         ) : (
                             <>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/createmovie">
+                                    <Link className="nav-link" to="/creategallery">
                                         Create Gallery
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/my-galleries">
+                                        My Galleries
                                     </Link>
                                 </li>
                                 <li className="nav-item">

@@ -12,20 +12,20 @@ export default class GalleryService {
     }
     static async get(id) {
         return await HttpService.request({
-            url: `/movies/${id}`,
+            url: `/galleries/${id}`,
             method: "GET",
         });
     }
     static async create(data) {
         return await HttpService.request({
-            url: "/movies",
+            url: "/galleries",
             method: "POST",
             data,
         });
     }
     static async update(id, data) {
         return await HttpService.request({
-            url: `/movies/${id}`,
+            url: `/galleries/${id}`,
             method: "PUT",
             data,
         });

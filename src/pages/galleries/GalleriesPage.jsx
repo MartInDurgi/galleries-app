@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import GalleriesService from "../../services/galleries.service";
 import Movie from "../../components/Gallery";
@@ -15,9 +15,7 @@ const MoviesPage = () => {
 
     useEffect(() => {
         const getMovies = async () => {
-            const { data } = await GalleriesService.getAll(
-
-            );
+            const { data } = await GalleriesService.getAll();
             data?.metadata && setMetaData(data.metadata);
             data?.data && setMovies(data.data);
         };
