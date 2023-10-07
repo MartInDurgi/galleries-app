@@ -6,8 +6,27 @@ import Storage from "../../utilis/Storage";
 
 
 const RegisterPage = () => {
+
+
+    const [agree, setAgree] = useState(false);
+
+    const checkboxHandler = () => {
+        // if agree === true, it will be set to false
+        // if agree === false, it will be set to true
+        setAgree(!agree);
+        // Don't miss the exclamation mark
+    }
+
+
+
+
+
+
+
+
     const [data, setData] = useState({
-        name: "",
+        firstname: "",
+        latsname: "",
         email: "",
         password: "",
         password_confirmation: "",
@@ -59,9 +78,20 @@ const RegisterPage = () => {
                         placeholder="Username"
                         required
                         value={data.name}
-                        onChange={(e) => setData({ ...data, name: e.target.value })}
+                        onChange={(e) => setData({ ...data, firstname: e.target.value })}
                     />
-                    <label>Username</label>
+                    <label>Firstname</label>
+                </div>
+                <div className="form-floating">
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Username"
+                        required
+                        value={data.name}
+                        onChange={(e) => setData({ ...data, lastname: e.target.value })}
+                    />
+                    <label>Lastname</label>
                 </div>
                 <div className="form-floating">
                     <input
@@ -91,10 +121,22 @@ const RegisterPage = () => {
                 <button
                     className="btn btn-primary w-100 py-2"
                     type="submit"
-                    disabled={isLoading}
+                    disabled={!agree || isLoading}
+                /*  disabled={isLoading} */
                 >
+
+                    {/*   isLoading */}
                     Register
                 </button>
+
+                <div className="container">
+                    <div>
+                        <input type="checkbox" id="agree" onChange={checkboxHandler} />
+                        <label htmlFor="agree"> I agree to <b>terms and conditions</b></label>
+                    </div>
+
+
+                </div>
                 {error && <div className="alert alert-danger mt-5">{error}</div>}
                 <p className="mt-5 mb-3 text-body-secondary">
                     &copy; Copyright Vivify Academy
