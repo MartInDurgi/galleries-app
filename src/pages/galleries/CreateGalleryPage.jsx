@@ -118,7 +118,7 @@ const CreateGalleryPage = () => {
                         <div className="box inputBox" key={i}>
 
                             <input
-                                type="url"
+                                type="URL"
                                 name="inputBox"
                                 value={x.inputBox}
                                 onChange={(e) => handleInputChange(e, i)

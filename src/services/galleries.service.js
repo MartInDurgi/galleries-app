@@ -3,7 +3,7 @@ import HttpService from "./http.service";
 
 
 export default class GalleryService {
-    static async getAll(take = 10, skip = 0, search = "") {
+    static async getAll(take = 5, skip = 0, search = "") {
         return await HttpService.request({
             url: "/galleries",
             method: "GET",

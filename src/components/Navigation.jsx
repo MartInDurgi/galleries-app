@@ -42,11 +42,11 @@ const Navigaton = () => {
                                         Create Gallery
                                     </Link>
                                 </li>
-                                <li className="nav-item">
+                                {/*      <li className="nav-item">
                                     <Link className="nav-link" to="/my-galleries">
                                         My Galleries
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li className="nav-item">
                                     <button className="nav-link" onClick={logout}>
                                         Logout

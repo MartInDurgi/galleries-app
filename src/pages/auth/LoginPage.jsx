@@ -34,7 +34,7 @@ const LoginPage = () => {
     };
 
     return (
-        <main className="form-signin w-100 m-auto">
+        <main className="form-signin w-80 m-auto">
             <form onSubmit={handleSubmit}>
                 <h1 className="h3 mb-3 fw-normal">Please Login</h1>
 
